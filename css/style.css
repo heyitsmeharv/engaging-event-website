@@ -1,9 +1,10 @@
 /*
 COLORS:
 
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
+blue1: #e3fdfd
+blue2: #cbf1f5
+blue3: #a6e3e9
+blue4: #71c9ce
 
 */
 
@@ -15,4 +16,22 @@ Dark green: #28b485
 
 body {
   font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: 16px;
+  line-height: 1.7;
+  color: #777;
+  /* padding: 30px; */
+}
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+    to right bottom,
+     #71c9ce,
+     #a6e3e9),
+     url(../img/love.png);
+  background-size: cover;
+  background-position: top;
+
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
