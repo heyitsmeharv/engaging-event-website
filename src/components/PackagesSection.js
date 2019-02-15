@@ -1,0 +1,379 @@
+import React from 'react';
+import styled, { css } from 'styled-components';
+import colour from '../resources/styles/colours';
+import PackageOne from '../resources/images/packageone.png';
+import PackageTwo from '../resources/images/packagetwo.png';
+import PackageThree from '../resources/images/packagethree.png';
+import { moveInBottom } from '../animations/Animations';
+
+const Row = styled.div`
+  max-width: 166rem;
+  margin: 0 auto;
+
+  &:not(:last-child) {
+    margin-bottom: 8rem;
+  }
+
+  ::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  //! select all the class attributes starting with 'col-'
+  [class^="col-"] {
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: 6rem;
+    }
+  }
+
+  .col-1-of-2 {
+    width: calc((100% - 6rem) / 2);
+  }
+
+  .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3);
+  }
+
+  .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem);
+  }
+
+  .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4);
+  }
+
+  .col-2-of-4 {
+    width: calc(2 * ((100% - 3 * 6rem) / 4)) + 6rem;
+  }
+
+  .col-3-of-4 {
+    width: calc(3 * ((100% - 3 * 6rem) / 4)) + 2 * 6rem;
+  }
+`
+
+const Button = styled.a`
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all .2s;
+  position: relative;
+  font-size: 1.6rem;
+  :hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+  }
+  :active {
+    transform: translateY(-1px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+  }
+  ${props => props.white && props.animate && css`
+    background-color: ${colour.white};
+    color: ${colour.gray};
+    ::after {
+      background-color: ${colour.white};
+    }
+    animation-name: ${moveInBottom};
+    animation-duration: .5s;
+    animation-timing-function: ease-out .75s;
+    animation-fill-mode: backwards;
+  `}
+  ::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+  }
+  :hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+  }
+`
+
+const Card = styled.div`
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 50rem;
+
+  .side {
+    height: 50rem;
+    transition: all .8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: 0, 1.5rem 4rem rbga(#000, .15);
+  }
+
+  .front {
+    background-color: ${colour.white}
+  }
+
+  .back {
+    transform: rotateY(180deg);
+  }
+
+  .back-colour-one {
+    background-image: linear-gradient(to right bottom, ${colour.primaryLight}, ${colour.primaryDarker});
+  }
+
+  .picture-one {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    background-image: linear-gradient(to right bottom, rgb(113, 201, 206), rgb(166, 227, 233)), url(${PackageOne});
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    /* height: 50%; */
+  }
+
+  .picture-two {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    background-image: linear-gradient(to right bottom, rgb(113, 201, 206), rgb(166, 227, 233)), url(${PackageTwo});
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+
+  .picture-three {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    background-image: linear-gradient(to right bottom, rgb(113, 201, 206), rgb(166, 227, 233)), url(${PackageThree});
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+
+  .heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: ${colour.white};
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 75%;
+  }
+
+  .heading-span {
+    padding: 1rem 1.5rem;
+    webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
+  .heading-colour-one {
+    background-image: linear-gradient(to right bottom, rgb(113, 201, 206, 0.85), rgb(166, 227, 233, 0.85));
+  }
+
+  .details {
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+    }
+    li {
+      text-align: center;
+      font-size: 1.5rem;
+      padding: 1rem;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid ${colour.lightGray};
+      }
+    }
+  }
+
+  .packages {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .package-box {
+    text-align: center;
+    color: ${colour.white};
+    margin-bottom: 8rem;
+
+  }
+
+  .package-only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+
+  .package-value {
+    font-size: 6rem;
+    font-weight: 100;
+  }
+
+  :hover .front {
+    transform: rotateY(-180deg);
+  }
+
+  :hover .back {
+    transform: rotateY(0);
+  }
+
+  /* ${props => props.lighter && css`
+    background-color: ${colour.primaryLighter};
+  `}
+  ${props => props.light && css`
+    background-color: ${colour.primaryLight};
+  `}
+  ${props => props.dark && css`
+    background-color: ${colour.primaryDark};
+  `}
+  ${props => props.darker && css`
+    background-color: ${colour.primaryDarker};
+  `} */
+`
+
+
+const SectionPackages = styled.section`
+  background-color: ${colour.lightGray};
+  padding: 15rem 0;
+  .section-header {
+    text-align: center;
+    font-size: 4rem;
+    text-transform: uppercase;
+    padding-bottom: 3rem;
+    color: ${colour.gray};
+    font-weight: 700;
+    letter-spacing: 1.5rem;
+    background-image: linear-gradient(to right, ${colour.primaryDarker}, ${colour.primaryLighter});
+    -webkit-background-clip:text;
+    color: transparent;
+  }
+  .section-text {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
+`
+
+const PackagesSection = () => {
+  return (
+    <SectionPackages>
+      <h2 className="section-header">
+        Packages
+      </h2>
+      <Row>
+        <div className="col-1-of-3">
+          <Card lighter="true">
+            <div className="side front">
+              <div className="picture-one">
+                &nbsp;
+              </div>
+              <h4 className="heading">
+                <span className="heading-span heading-colour-one">
+                  Party Plan
+                </span>
+              </h4>
+              <div className="details">
+                <ul>
+                  <li>Fully Operational For 3 Hours</li>
+                  <li>Unlimited Visits</li>
+                  <li>Personalised Templates</li>
+                  <li>Over 50 Props</li>
+                  <li>Staff On Hand At All Times</li>
+                </ul>
+              </div>
+            </div>
+            <div className="side back back-colour-one">
+              <div className="packages">
+                <div className="package-box">
+                  <p className="package-only">Only</p>
+                  <p className="package-value">£325</p>
+                </div>
+                <Button animate="true" white="true">Book now!</Button>
+              </div>
+            </div>
+          </Card>
+        </div>
+        <div className="col-1-of-3">
+        <Card lighter="true">
+            <div className="side front">
+              <div className="picture-two">
+                &nbsp;
+              </div>
+              <h4 className="heading">
+                <span className="heading-span heading-colour-one">
+                  Simply Digital
+                </span>
+              </h4>
+              <div className="details">
+                <ul>
+                  <li>Fully Operational For 3 Hours</li>
+                  <li>Unlimited Visits</li>
+                  <li>Personalised Templates</li>
+                  <li>USB Stick</li>
+                  <li>Staff On Hand At All Times</li>
+                </ul>
+              </div>
+            </div>
+            <div className="side back back-colour-one">
+              <div className="packages">
+                <div className="package-box">
+                  <p className="package-only">Only</p>
+                  <p className="package-value">£250</p>
+                </div>
+                <Button animate="true" white="true">Book now!</Button>
+              </div>
+            </div>
+          </Card>
+        </div>
+        <div className="col-1-of-3">
+        <Card lighter="true">
+            <div className="side front">
+              <div className="picture-three">
+                &nbsp;
+              </div>
+              <h4 className="heading">
+                <span className="heading-span heading-colour-one">
+                  Party Memories
+                </span>
+              </h4>
+              <div className="details">
+                <ul>
+                  <li>Fully Operational For 3 Hours</li>
+                  <li>Unlimited Visits</li>
+                  <li>Photo Album</li>
+                  <li>Photo Sharing Pad</li>
+                  <li>Additional Prints</li>
+                </ul>
+              </div>
+            </div>
+            <div className="side back back-colour-one">
+              <div className="packages">
+                <div className="package-box">
+                  <p className="package-only">Only</p>
+                  <p className="package-value">£400</p>
+                </div>
+                <Button animate="true" white="true">Book now!</Button>
+              </div>
+            </div>
+          </Card>
+        </div>
+      </Row>
+    </SectionPackages>
+  );
+}
+
+export default PackagesSection;
