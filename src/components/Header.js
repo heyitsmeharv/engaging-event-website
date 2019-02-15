@@ -4,6 +4,7 @@ import { MainButton } from './Button';
 import { moveInLeft, moveInRight } from '../animations/Animations';
 import image from '../resources/images/love.jpg';
 import logo from '../resources/images/EELogo.png';
+import GuideForBride from '../resources/images/GuidesForBrides.png';
 import colour from '../resources/styles/colours';
 
 const HeaderContainer = styled.div`
@@ -54,6 +55,12 @@ const LogoBox = styled.div`
   left: 4rem;
 `;
 
+const LogoBoxTwo = styled.div`
+  position: absolute;
+  top: 2rem;
+  right: 4rem;
+`
+
 const Logo = styled.image`
   height: 3.5rem;
 `;
@@ -65,6 +72,10 @@ const Header = () => {
         {/* <Logo src={logo} alt="logo" /> */}
         <img src={logo} alt="logo" style={{height: '5.5rem'}}/>
       </LogoBox>
+      <LogoBoxTwo>
+        {/* <Logo src={logo} alt="logo" /> */}
+        <a target="_blank" href="https://www.guidesforbrides.co.uk/find/wedding-entertainment/oxfordshire/engaging-event/144065"><img src={GuideForBride} alt="logo"/></a>
+      </LogoBoxTwo>
       <TextBox>
         <h1 className="heading-primary">
           <span className="heading-primary-main">Engaging Event</span>
