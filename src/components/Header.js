@@ -74,7 +74,7 @@ const Header = () => {
       </LogoBox>
       <LogoBoxTwo>
         {/* <Logo src={logo} alt="logo" /> */}
-        <a target="_blank" href="https://www.guidesforbrides.co.uk/find/wedding-entertainment/oxfordshire/engaging-event/144065"><img src={GuideForBride} alt="logo"/></a>
+        <img src={GuideForBride} alt="logo"/>
       </LogoBoxTwo>
       <TextBox>
         <h1 className="heading-primary">

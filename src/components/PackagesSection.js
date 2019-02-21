@@ -151,10 +151,28 @@ const Card = styled.div`
       width: 80%;
       margin: 0 auto;
     }
-    li {
+    .three {
       text-align: center;
       font-size: 1.5rem;
-      padding: 1rem;
+      padding: 3rem;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid ${colour.lightGray};
+      }
+    }
+    .four {
+      text-align: center;
+      font-size: 1.5rem;
+      padding: 2rem;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid ${colour.lightGray};
+      }
+    }
+    .five {
+      text-align: center;
+      font-size: 1.5rem;
+      padding: 1.3rem;
 
       &:not(:last-child) {
         border-bottom: 1px solid ${colour.lightGray};
@@ -227,6 +245,36 @@ const PackagesSection = () => {
         Popular Packages
       </h2>
       <Row>
+      <div className="col-1-of-3">
+        <Card lighter="true">
+            <div className="side front">
+              <div className="picture-two">
+                &nbsp;
+              </div>
+              <h4 className="heading">
+                <span className="heading-span heading-colour-one">
+                  Simply Digital
+                </span>
+              </h4>
+              <div className="details">
+                <ul>
+                  <li className="three">Unlimited Visits</li>
+                  <li className="three">Personalised Templates</li>
+                  <li className="three">USB Stick</li>
+                </ul>
+              </div>
+            </div>
+            <div className="side back back-colour-one">
+              <div className="packages">
+                <div className="package-box">
+                  <p className="package-only">Only</p>
+                  <p className="package-value">£250</p>
+                </div>
+                <MainButton animate="true" white="true">Book now!</MainButton>
+              </div>
+            </div>
+          </Card>
+        </div>
         <div className="col-1-of-3">
           <Card lighter="true">
             <div className="side front">
@@ -240,11 +288,10 @@ const PackagesSection = () => {
               </h4>
               <div className="details">
                 <ul>
-                  <li>Fully Operational For 3 Hours</li>
-                  <li>Unlimited Visits</li>
-                  <li>Personalised Templates</li>
-                  <li>Over 50 Props</li>
-                  <li>Staff On Hand At All Times</li>
+                  <li className="four">Fully Operational For 3 Hours</li>
+                  <li className="four">Unlimited Visits</li>
+                  <li className="four">Personalised Templates</li>
+                  <li className="four">Over 50 Props</li>
                 </ul>
               </div>
             </div>
@@ -253,38 +300,6 @@ const PackagesSection = () => {
                 <div className="package-box">
                   <p className="package-only">Only</p>
                   <p className="package-value">£325</p>
-                </div>
-                <MainButton animate="true" white="true">Book now!</MainButton>
-              </div>
-            </div>
-          </Card>
-        </div>
-        <div className="col-1-of-3">
-        <Card lighter="true">
-            <div className="side front">
-              <div className="picture-two">
-                &nbsp;
-              </div>
-              <h4 className="heading">
-                <span className="heading-span heading-colour-one">
-                  Simply Digital
-                </span>
-              </h4>
-              <div className="details">
-                <ul>
-                  <li>Fully Operational For 3 Hours</li>
-                  <li>Unlimited Visits</li>
-                  <li>Personalised Templates</li>
-                  <li>USB Stick</li>
-                  <li>Staff On Hand At All Times</li>
-                </ul>
-              </div>
-            </div>
-            <div className="side back back-colour-one">
-              <div className="packages">
-                <div className="package-box">
-                  <p className="package-only">Only</p>
-                  <p className="package-value">£250</p>
                 </div>
                 <MainButton animate="true" white="true">Book now!</MainButton>
               </div>
@@ -304,11 +319,11 @@ const PackagesSection = () => {
               </h4>
               <div className="details">
                 <ul>
-                  <li>Fully Operational For 3 Hours</li>
-                  <li>Unlimited Visits</li>
-                  <li>Photo Album</li>
-                  <li>Photo Sharing Pad</li>
-                  <li>Additional Prints</li>
+                  <li className="five">Staff On Hand At All Times</li>
+                  <li className="five">Unlimited Visits</li>
+                  <li className="five">Photo Album</li>
+                  <li className="five">Photo Sharing Pad</li>
+                  <li className="five">Additional Prints</li>
                 </ul>
               </div>
             </div>
