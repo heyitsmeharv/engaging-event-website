@@ -7,6 +7,7 @@ import WhoAreWeSection from '../components/WhoAreWeSection';
 import WhatDoWeOfferSection from '../components/WhatDoWeOfferSection';
 import PackagesSection from '../components/PackagesSection';
 import Footer from '../components/Footer';
+import logo from '../resources/images/EELogo.png';
 
 
 const HomePageStyle = styled.div`
@@ -14,6 +15,13 @@ const HomePageStyle = styled.div`
   padding: 25rem 0;
   margin-top: -20vh;
 `
+
+const LogoBox = styled.div`
+  position: absolute;
+  top: 4rem;
+  left: 6rem;
+`;
+
 
 // const Row = styled.div`
 //   max-width: 68rem;
@@ -67,6 +75,10 @@ const HomePageStyle = styled.div`
 const Home = () => {
   return (
     <Wrapper>
+      <LogoBox>
+      {/* <Logo src={logo} alt="logo" /> */}
+      <img src={logo} alt="logo" style={{height: '5.5rem'}}/>
+    </LogoBox>
       <Header />
       <HomePageStyle>
         <WhoAreWeSection />

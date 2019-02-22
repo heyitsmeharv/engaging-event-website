@@ -102,6 +102,8 @@ const Card = styled.div`
     background-image: linear-gradient(to right bottom, rgb(113, 201, 206), rgb(166, 227, 233)), url(${PackageOne});
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
     /* height: 50%; */
   }
 
@@ -112,6 +114,8 @@ const Card = styled.div`
     background-image: linear-gradient(to right bottom, rgb(113, 201, 206), rgb(166, 227, 233)), url(${PackageTwo});
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
   }
 
   .picture-three {
@@ -121,6 +125,8 @@ const Card = styled.div`
     background-image: linear-gradient(to right bottom, rgb(113, 201, 206), rgb(166, 227, 233)), url(${PackageThree});
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
   }
 
   .heading {

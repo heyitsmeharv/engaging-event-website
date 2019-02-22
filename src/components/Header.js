@@ -13,8 +13,8 @@ const HeaderContainer = styled.div`
   background-size: cover;
   background-position: top;
   position: relative;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  -webkit-clip-path: polygon(10% 0, 100% 0, 100% 83%, 0 100%, 0 15%);
+  clip-path: polygon(10% 0, 100% 0, 100% 83%, 0 100%, 0 15%);
   .heading-primary {
     color: ${colour.white};
     text-transform: uppercase;
@@ -68,10 +68,9 @@ const Logo = styled.image`
 const Header = () => {
   return (
     <HeaderContainer>
-      <LogoBox>
-        {/* <Logo src={logo} alt="logo" /> */}
+      {/* <LogoBox>
         <img src={logo} alt="logo" style={{height: '5.5rem'}}/>
-      </LogoBox>
+      </LogoBox> */}
       <LogoBoxTwo>
         {/* <Logo src={logo} alt="logo" /> */}
         <img src={GuideForBride} alt="logo"/>
