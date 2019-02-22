@@ -18,8 +18,10 @@ const HomePageStyle = styled.div`
 
 const LogoBox = styled.div`
   position: absolute;
-  top: 4rem;
-  left: 6rem;
+  /* top: 4rem;
+  left: 6rem; */
+  left: 5rem;
+  top: 12rem;
 `;
 
 
@@ -77,8 +79,8 @@ const Home = () => {
     <Wrapper>
       <LogoBox>
       {/* <Logo src={logo} alt="logo" /> */}
-      <img src={logo} alt="logo" style={{height: '5.5rem'}}/>
-    </LogoBox>
+        <img src={logo} alt="logo" style={{height: '5.5rem'}}/>
+      </LogoBox>
       <Header />
       <HomePageStyle>
         <WhoAreWeSection />

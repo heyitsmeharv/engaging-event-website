@@ -14,6 +14,7 @@ export const MainButton = styled.a`
   :hover {
     transform: translateY(-3px);
     box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+    cursor: pointer;
   }
   :active {
     transform: translateY(-1px);
@@ -48,6 +49,10 @@ export const MainButton = styled.a`
   }
 `
 
+export const AdminButton = styled(MainButton)`
+  float: right;
+`
+
 export const PackagesButton = styled.a`
   text-transform: uppercase;
   text-decoration: none;
@@ -60,6 +65,7 @@ export const PackagesButton = styled.a`
   :hover {
     transform: translateY(-3px);
     box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+    cursor: pointer;
   }
   :active {
     transform: translateY(-1px);
@@ -91,5 +97,6 @@ export const PackagesButton = styled.a`
   :hover::after {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0;
+    cursor: pointer;
   }
 `

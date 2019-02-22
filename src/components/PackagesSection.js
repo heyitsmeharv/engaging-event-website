@@ -248,7 +248,7 @@ const PackagesSection = () => {
   return (
     <SectionPackages>
       <h2 className="section-header">
-        Popular Packages
+        Packages
       </h2>
       <Row>
       <div className="col-1-of-3">
