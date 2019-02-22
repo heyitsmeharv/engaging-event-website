@@ -49,8 +49,11 @@ export const MainButton = styled.a`
   }
 `
 
-export const AdminButton = styled(MainButton)`
-  float: right;
+export const NavButton = styled(MainButton)`
+  margin: 1rem;
+  ${props => props.right && css`
+    float: right;
+  `}
 `
 
 export const PackagesButton = styled.a`

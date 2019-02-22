@@ -21,7 +21,7 @@ const LogoBox = styled.div`
   /* top: 4rem;
   left: 6rem; */
   left: 5rem;
-  top: 12rem;
+  top: 17rem;
 `;
 
 
