@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 import colour from '../resources/styles/colours';
 import { moveInBottom } from '../animations/Animations';
+import { NavLink } from 'react-router-dom';
 
 export const MainButton = styled.a`
   text-transform: uppercase;
@@ -101,5 +102,48 @@ export const PackagesButton = styled.a`
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0;
     cursor: pointer;
+  }
+`
+
+export const NavigationButton = styled(NavLink)`
+  font-size: 2.5rem;
+  height: 7rem;
+  width: 7rem;
+  background: ${colour.white};
+  border-radius: 50%;
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+  background-image: radial-gradient(rgb(166, 227, 233, 0.8), rgb(113, 201, 206, 0.8));
+  z-index: 2000;
+  svg {
+    padding: 22px;
+    color: ${colour.white};
+  }
+  :hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+    cursor: pointer;
+  }
+`
+
+export const NavigationLink = styled(NavLink)`
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 300;
+  padding: 1rem 2rem;
+  color: ${colour.white};
+  text-decoration: none;
+  text-transform: uppercase;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, ${colour.white} 50%);
+  background-size: 230%;
+  transition: all .4s;
+
+  :hover,
+  :active {
+    cursor: pointer;
+    background-position: 100%;
+    color: ${colour.primaryDarker};
+    transform: translateX(1rem);
   }
 `

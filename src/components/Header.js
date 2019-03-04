@@ -13,8 +13,8 @@ const HeaderContainer = styled.div`
   background-size: cover;
   background-position: top;
   position: relative;
-  -webkit-clip-path: polygon(10% 0, 100% 0, 100% 83%, 0 100%, 0 15%);
-  clip-path: polygon(10% 0, 100% 0, 100% 83%, 0 100%, 0 15%);
+  -webkit-clip-path: polygon(10% 0, 100% 0, 100% 83%, 0 100%, 0 20%);
+  clip-path: polygon(10% 0, 100% 0, 100% 83%, 0 100%, 0 20%);
   .heading-primary {
     color: ${colour.white};
     text-transform: uppercase;
@@ -71,10 +71,10 @@ const Header = () => {
       {/* <LogoBox>
         <img src={logo} alt="logo" style={{height: '5.5rem'}}/>
       </LogoBox> */}
-      <LogoBoxTwo>
-        {/* <Logo src={logo} alt="logo" /> */}
+      {/* <LogoBoxTwo>
+        <Logo src={logo} alt="logo" />
         <img src={GuideForBride} alt="logo"/>
-      </LogoBoxTwo>
+      </LogoBoxTwo> */}
       <TextBox>
         <h1 className="heading-primary">
           <span className="heading-primary-main">Engaging Event</span>

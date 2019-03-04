@@ -7,7 +7,7 @@ const NavBarStyle = styled.section`
   margin-bottom: 2rem;
   padding: 1.5rem 4rem;
   border-radius: 10rem;
-  background-color: ${colour.primaryDarker}
+  /* background-color: ${colour.primaryDarker} */
 `;
 
 const NavBar = () => {

@@ -18,10 +18,12 @@ const HomePageStyle = styled.div`
 
 const LogoBox = styled.div`
   position: absolute;
-  /* top: 4rem;
-  left: 6rem; */
+  top: 4rem;
+  left: 4rem;
+  /* If you include navbar
   left: 5rem;
   top: 17rem;
+  */
 `;
 
 
