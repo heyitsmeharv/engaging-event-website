@@ -138,6 +138,7 @@ export const NavigationLink = styled(NavLink)`
   background-image: linear-gradient(120deg, transparent 0%, transparent 50%, ${colour.white} 50%);
   background-size: 230%;
   transition: all .4s;
+  box-shadow: 0 1rem 3rem rgba(${colour.black}, .4);
 
   :hover,
   :active {
