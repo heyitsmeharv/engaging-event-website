@@ -20,6 +20,17 @@ const NavCheckBox = styled.input`
     opacity: 1;
     width: 100%;
   }
+  :checked + label span {
+    background: transparent;
+  }
+  :checked + label span::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+  :checked + label span::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
 `
 
 const NavBackground = styled.div`
@@ -59,6 +70,7 @@ const NavLabel = styled.label`
   right: 6rem;
   background-image: radial-gradient(rgb(166, 227, 233, 0.8), rgb(113, 201, 206, 0.8));
   z-index: 2000;
+  text-align: center;
   svg {
     padding: 22px;
     color: ${colour.white};
@@ -67,6 +79,12 @@ const NavLabel = styled.label`
     transform: translateY(-3px);
     box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
     cursor: pointer;
+    .icon::before {
+      top: -1rem;
+    }
+    .icon::after {
+      top: 1rem;
+    }
   }
   :active {
     transform: translateY(-1px);
@@ -100,6 +118,30 @@ const NavLabel = styled.label`
     opacity: 0;
     cursor: pointer;
   }
+`
+
+const NavIcon = styled.span`
+  position: relative;
+  margin-top: 3.2rem;
+  &,
+  ::before,
+  ::after {
+    width: 3rem;
+    height: 2px;
+    background-color: ${colour.darkGray};
+    display: inline-block;
+  }
+
+  ::before,
+  ::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all .2s;
+  }
+
+  ::before { top: -.8rem }
+  ::after { top: .8rem }
 `
 
 const NavList = styled.ul`
@@ -136,9 +178,9 @@ class Navigation extends React.Component {
       <NavContainer>
         <NavCheckBox type="checkbox" id="navi-toggle" />
         <NavLabel htmlFor="navi-toggle" animate="true">
-          <FiAlignJustify/>
+          <NavIcon className="icon"/>
         </NavLabel>
-        <NavBackground className="__background" />
+        <NavBackground/>
         <Nav>
           <NavList>
             <NavItem><NavigationLink exact to="/home"><NavSpan>01</NavSpan>Home</NavigationLink></NavItem>
