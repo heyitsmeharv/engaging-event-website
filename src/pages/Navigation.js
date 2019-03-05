@@ -31,7 +31,21 @@ const NavBackground = styled.div`
   right: 6.5rem;
   background-image: radial-gradient(rgb(166, 227, 233, 1), rgb(113, 201, 206, 1));
   z-index: 1000;
-  transition: transform .8s;
+  transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+  -webkit-transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+`
+
+const Nav = styled.nav`
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1500;
+
+  opacity: 0;
+  width: 0;
+  transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 `
 
 const NavLabel = styled.label`
@@ -86,19 +100,6 @@ const NavLabel = styled.label`
     opacity: 0;
     cursor: pointer;
   }
-`
-
-const Nav = styled.nav`
-  height: 100vh;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  right: 0;
-  transition: opacity .8;
-  z-index: 1500;
-
-  opacity: 0;
-  width: 0;
 `
 
 const NavList = styled.ul`
