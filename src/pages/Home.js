@@ -19,7 +19,7 @@ const HomePageStyle = styled.div`
 const LogoBox = styled.div`
   position: absolute;
   top: 4rem;
-  left: 4rem;
+  left: 5rem;
   z-index: 1;
   /* If you include navbar
   left: 5rem;

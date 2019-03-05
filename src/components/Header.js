@@ -49,8 +49,8 @@ const HeaderContainer = styled.div`
     left: 0%;
     width: 0px;
     height: 0px;
-    border-bottom: 129px solid #eee;
-    border-left: 129px solid #272822; /*Set to background color, not transparent!*/
+    border-bottom: 139px solid #eee;
+    border-left: 139px solid #272822; /*Set to background color, not transparent!*/
     -webkit-box-shadow: 7px 7px 7px rgba(0,0,0,0.3);
     -moz-box-shadow: 7px 7px 7px rgba(0,0,0,0.3);
     box-shadow: 7px 7px 7px rgba(0,0,0,0.3);
@@ -62,8 +62,8 @@ const HeaderContainer = styled.div`
     left: 0%;
     width: 0px;
     height: 0px;
-    border-top: 130px solid ${colour.white};
-    border-right: 130px solid transparent;
+    border-top: 140px solid ${colour.white};
+    border-right: 140px solid transparent;
   }
 `;
 
