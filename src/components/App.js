@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <Router>
         <Wrapper>
-          <Route path="/" component={Nav}/>
+          <Route path="/" component={Navigation}/>
           <Route
             render={({ location }) => {
               return (
@@ -24,7 +24,7 @@ class App extends Component {
                 //   >
                   <Switch location={location}>
                     <Route path="/home" component={Home} />
-                    <Route exact path="/navigation" component={Navigation} />
+                    {/* <Route exact path="/navigation" component={Navigation} /> */}
                   </Switch>
               //   </CSSTransition>
               // </TransitionGroup>
