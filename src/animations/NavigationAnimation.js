@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Page from '../components/Page';
-import SlideOutTop from './SlideOutTop';
-import SlideInTop from './SlideInTop';
+import { SlideOutTop } from './Animations';
+import { SlideInTop } from './Animations';
 
 const NavigationAnimation = styled(Page)`
 &.page-enter {

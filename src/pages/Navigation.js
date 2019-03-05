@@ -51,7 +51,7 @@ const NavBackground = styled.div`
   background-image: radial-gradient(rgb(166, 227, 233, 0.8), rgb(113, 201, 206, 0.8));
 
   transition: transform .8s;
-  transform: scale(60);
+  /* transform: scale(60); */
 `
 
 const Nav = styled.nav`
@@ -83,7 +83,8 @@ const NavSpan = styled.span`
 
 const Navigation = () => {
   return (
-    <NavigationAnimation>
+    // <NavigationAnimation>
+    <NavContainer>
         <NavCheckBox />
         <NavBackground />
         <Nav>
@@ -94,7 +95,8 @@ const Navigation = () => {
             <NavItem><NavigationLink exact to="/contactus"><NavSpan>04</NavSpan>Contact Us</NavigationLink></NavItem>
           </NavList>
         </Nav>
-    </NavigationAnimation>
+      </NavContainer>
+    // </NavigationAnimation>
   )
 }
 

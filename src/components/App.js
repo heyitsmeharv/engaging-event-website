@@ -16,18 +16,18 @@ class App extends Component {
           <Route
             render={({ location }) => {
               return (
-                <TransitionGroup component={null}>
-                  <CSSTransition
-                    timeout={300}
-                    classNames="page"
-                    key={location.key}
-                  >
+                // <TransitionGroup component={null}>
+                //   <CSSTransition
+                //     timeout={300}
+                //     classNames="page"
+                //     key={location.key}
+                //   >
                   <Switch location={location}>
-                    <Route exact path="/home" component={Home} />
+                    <Route path="/home" component={Home} />
                     <Route exact path="/navigation" component={Navigation} />
                   </Switch>
-                </CSSTransition>
-              </TransitionGroup>
+              //   </CSSTransition>
+              // </TransitionGroup>
               );
             }}
           />
