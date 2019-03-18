@@ -4,7 +4,6 @@ import colour from '../resources/styles/colours';
 import { moveInBottom } from '../animations/Animations';
 import { NavigationButton, NavigationLink } from '../components/Button';
 import { FiAlignJustify } from "react-icons/fi";
-import NavigationAnimation from '../animations/NavigationAnimation';
 
 
 const NavContainer = styled.div`
@@ -80,10 +79,10 @@ const NavLabel = styled.label`
     box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
     cursor: pointer;
     .icon::before {
-      top: -1rem;
+      /* top: -1rem; */
     }
     .icon::after {
-      top: 1rem;
+      /* top: 1rem; */
     }
   }
   :active {
@@ -174,7 +173,6 @@ class Navigation extends React.Component {
   render() {
     const { toggleActive } = this.state;
     return (
-      // <NavigationAnimation>
       <NavContainer>
         <NavCheckBox type="checkbox" id="navi-toggle" />
         <NavLabel htmlFor="navi-toggle" animate="true">
@@ -190,7 +188,6 @@ class Navigation extends React.Component {
           </NavList>
         </Nav>
       </NavContainer>
-      // </NavigationAnimation>
     )
   }
 }
