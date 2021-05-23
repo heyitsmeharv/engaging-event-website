@@ -13,8 +13,8 @@ const HeaderContainer = styled.div`
   background-size: cover;
   background-position: top;
   position: relative;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 83%, 0 100%, 0 20%);
-  clip-path: polygon(0 0, 100% 0, 100% 83%, 0 100%, 0 20%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 83%, 0 90%, 0 20%);
+  clip-path: polygon(0 0, 100% 0, 100% 83%, 0 90%, 0 20%);
   .heading-primary {
     color: ${colour.white};
     text-transform: uppercase;

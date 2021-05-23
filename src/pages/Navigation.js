@@ -170,23 +170,33 @@ class Navigation extends React.Component {
       toggleActive: false,
     }
   }
+
+  toggleNav = () => {
+    this.setState({
+      toggleActive: false
+    })
+  };
+  
   render() {
-    const { toggleActive } = this.state;
+    const {
+      toggleActive
+    } = this.state;
+
     return (
       <NavContainer>
         <NavCheckBox type="checkbox" id="navi-toggle" />
         <NavLabel htmlFor="navi-toggle" animate="true">
           <NavIcon className="icon"/>
         </NavLabel>
-        <NavBackground/>
-        <Nav>
-          <NavList>
-            <NavItem><NavigationLink exact to="/home"><NavSpan>01</NavSpan>Home</NavigationLink></NavItem>
-            <NavItem><NavigationLink exact to="/hire"><NavSpan>02</NavSpan>Hire</NavigationLink></NavItem>
-            <NavItem><NavigationLink exact to="/faq"><NavSpan>03</NavSpan>FAQ</NavigationLink></NavItem>
-            <NavItem><NavigationLink exact to="/contact"><NavSpan>04</NavSpan>Contact Us</NavigationLink></NavItem>
-          </NavList>
-        </Nav>
+          <NavBackground/>
+          <Nav>
+            <NavList>
+              <NavItem><NavigationLink onClick={() => this.toggleNav()} exact to="/"><NavSpan>01</NavSpan>Home</NavigationLink></NavItem>
+              <NavItem><NavigationLink onClick={() => this.toggleNav()} exact to="/hire"><NavSpan>02</NavSpan>Hire</NavigationLink></NavItem>
+              <NavItem><NavigationLink onClick={() => this.toggleNav()} exact to="/faq"><NavSpan>03</NavSpan>FAQ</NavigationLink></NavItem>
+              <NavItem><NavigationLink onClick={() => this.toggleNav()} exact to="/contact"><NavSpan>04</NavSpan>Contact Us</NavigationLink></NavItem>
+            </NavList>
+          </Nav>
       </NavContainer>
     )
   }

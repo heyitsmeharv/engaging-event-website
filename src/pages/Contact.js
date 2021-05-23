@@ -62,7 +62,9 @@ const ContactPageStyle = styled.div`
 const Contact = () => {
   return (
     <Wrapper>
-      <ContactPageStyle/>
+      <ContactPageStyle>
+        Hello
+      </ContactPageStyle>
     </Wrapper>
   );
 }
